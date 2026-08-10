@@ -1,4 +1,4 @@
-name: My First CI Pipeline
+name: Playwright CI
 
 on:
   push:
@@ -11,8 +11,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Say Hello
-        run: echo "Hello! My first CI pipeline is working."
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Show Node version
+      - name: Check Node version
         run: node --version
