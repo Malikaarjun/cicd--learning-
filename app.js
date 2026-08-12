@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
         <title>Login Page</title>
       </head>
       <body>
-        <h1>Welcome Page</h1>
+        <h1>Login Page</h1>
         <input id="username" placeholder="Username" />
         <input id="password" type="password" placeholder="Password" />
         <button id="login">Login</button>
