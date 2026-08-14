@@ -1,16 +1,16 @@
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
  
 test('Verify Login Page', async ({ page }) => {
-  await page.goto('http://localhost:3000');
  
-  await expect(page).toHaveTitle('Login Page');
+    const loginPage = new LoginPage(page);
  
-  await expect(page.locator('h1')).toHaveText('Login Page');
+    await loginPage.open();
+    await loginPage.enterUsername('testuser');
+    await loginPage.enterPassword('password123');
+    await loginPage.clickLogin();
+    await loginPage.verifyTitle();
  
-  await expect(page.locator('#username')).toBeVisible();
- 
-  await expect(page.locator('#password')).toBeVisible();
- 
-  await expect(page.locator('#login')).toBeVisible();
+    //await expect(page).toHaveTitle('Login Page');
 });
  
