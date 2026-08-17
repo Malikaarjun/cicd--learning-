@@ -1,8 +1,8 @@
 require('dotenv').config();
 const loginData = {
     validUser : {
-        username: process.env.USERNAME,
-        password: process.env.PASSWORD
+        username: process.env.TEST_USERNAME,
+        password: process.env.TEST_PASSWORD
     }
 };
 
