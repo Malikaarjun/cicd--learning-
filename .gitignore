@@ -3,3 +3,4 @@ test-results/
 node_modules/
 .env
 .env
+playwright-report/

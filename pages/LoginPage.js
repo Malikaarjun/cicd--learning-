@@ -29,6 +29,12 @@ async clickLogin() {
     async verifyTitle(){
         await expect(this.page).toHaveTitle('Login Page');
     }
+
+    async invalidlogin(username, password) {
+        await this.usernameInput.fill(username);
+        await this.passwordInput.fill(password);
+        await this.loginButton.click();
+    }
 }
  
 module.exports = { LoginPage };
