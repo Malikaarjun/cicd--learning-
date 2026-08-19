@@ -24,7 +24,7 @@ test('Invalid Username Login', async ({ loginPage }) => {
         loginData.invalidUser.password
     );
 
-    await expect(page.locator('#error')).toHaveText('Invalid username or password');
+    await expect(loginPage.page.locator('#error')).toHaveText('Invalid username or password');
 });
 
 test('Invalid Password Login', async ({ loginPage }) => {
@@ -36,6 +36,6 @@ test('Invalid Password Login', async ({ loginPage }) => {
         loginData.invalidPasswordUser.password
     );
 
-    await expect(page.locator('#error')).toHaveText('Invalid username or password');
+    await expect(loginPage.page.locator('#error')).toHaveText('Invalid username or password');
 });
  
